@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">MeuPortfólio</a>
+            </div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu Lateral</h2>
+            <ul>
+                <li><a href="#projeto1">Projeto 1</a></li>
+                <li><a href="#projeto2">Projeto 2</a></li>
+                <li><a href="#projeto3">Projeto 3</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="hero">
+                <h1>Bem-vindo ao Meu Portfólio!</h1>
+                <p>Sou um desenvolvedor apaixonado por criar soluções inovadoras.</p>
+                <a href="#contato" class="cta-button">Entre em Contato!</a>
+            </div>
+
+            <section id="sobre" class="section">
+                <div class="section-content">
+                    <h2>Sobre Mim</h2>
+                    <p>Sou um desenvolvedor web com experiência em diversas tecnologias. Estou sempre buscando aprender e crescer profissionalmente.</p>
+                    <img src="imagem-sobre.jpg" alt="Sobre Mim">
+                    <a href="#projetos" class="section-button">Ver Projetos</a>
+                </div>
+            </section>
+
+            <section id="projetos" class="section bg-light">
+                <div class="section-content">
+                    <h2>Meus Projetos</h2>
+                    <div class="projetos-grid">
+                        <div class="projeto" id="projeto1">
+                            <img src="projeto1.jpg" alt="Projeto 1">
+                            <h3>Projeto Incrível 1</h3>
+                            <p>Descrição do projeto 1.</p>
+                            <a href="#" class="projeto-button">Ver Detalhes</a>
+                        </div>
+                        <div class="projeto" id="projeto2">
+                            <img src="projeto2.jpg" alt="Projeto 2">
+                            <h3>Projeto Incrível 2</h3>
+                            <p>Descrição do projeto 2.</p>
+                            <a href="#" class="projeto-button">Ver Detalhes</a>
+                        </div>
+                        <div class="projeto" id="projeto3">
+                            <img src="projeto3.jpg" alt="Projeto 3">
+                            <h3>Projeto Incrível 3</h3>
+                            <p>Descrição do projeto 3.</p>
+                            <a href="#" class="projeto-button">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <a href="#habilidades" class="section-button">Ver Habilidades</a>
+                </div>
+            </section>
+
+            <section id="habilidades" class="section">
+                <div class="section-content">
+                    <h2>Minhas Habilidades</h2>
+                    <ul class="habilidades-list">
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <!-- Adicione mais habilidades conforme necessário -->
+                    </ul>
+                    <a href="#depoimentos" class="section-button">Ver Depoimentos</a>
+                </div>
+            </section>
+
+            <section id="depoimentos" class="section bg-light">
+                <div class="section-content">
+                    <h2>Depoimentos</h2>
+                    <blockquote>"Trabalhar com [Seu Nome] foi uma experiência incrível!" - Cliente Satisfeito</blockquote>
+                    <!-- Adicione mais depoimentos conforme necessário -->
+                    <a href="#contato" class="section-button">Entre em Contato</a>
+                </div>
+            </section>
+
+            <section id="contato" class="section">
+                <div class="section-content">
+                    <h2>Entre em Contato</h2>
+                    <form id="contact-form">
+                        <input type="text" placeholder="Seu Nome" required />
+                        <input type="email" placeholder="Seu Email" required />
+                        <textarea placeholder="Sua Mensagem" required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
