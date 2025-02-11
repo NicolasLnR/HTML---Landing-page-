@@ -1,93 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Lana - Portfólio</title>
+    <meta name="description" content="Portfólio de Nicolas, Desenvolvedor Back-End com experiência em Python, SQL e APIs. Veja meus projetos e entre em contato.">
+    <title>Portfólio - Nicolas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Cabeçalho -->
     <header>
-        <div class="perfil">
-            <img src="sua-foto.jpg" alt="Foto de Nicolas Lana">
-            <div class="perfil-info">
-                <h1>Nicolas Lana</h1>
-                <p class="typing-text">Desenvolvedor Full Stack</p>
-                <div class="redes-sociais">
-                    <a href="https://www.linkedin.com/in/nicolas-lana-66830b247/" target="_blank">LinkedIn</a>
-                    <a href="mailto:nicolaslana2611@gmail.com">Email</a>
-                    <a href="tel:+5511991035886">WhatsApp</a>
-                </div>
-            </div>
-        </div>
         <nav>
-            <button class="menu-toggle">?</button>
+            <div class="logo">Meu Portfólio</div>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre" aria-label="Ir para a seção Sobre">Sobre</a></li>
+                <li><a href="#projetos" aria-label="Ir para a seção Projetos">Projetos</a></li>
+                <li><a href="#habilidades" aria-label="Ir para a seção Habilidades">Habilidades</a></li>
+                <li><a href="#contato" aria-label="Ir para a seção Contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <main>
-        <section class="hero">
-            <h2>Bem-vindo ao meu portfólio!</h2>
-            <p>Sou um desenvolvedor apaixonado por tecnologia, especializado em APIs, integração de sistemas e análise de dados.</p>
-            <a href="#contato" class="cta-button">Entre em Contato!</a>
-        </section>
+      <section class="hero">
+          <img src="imagem perfil.jpg" alt="Foto de Nicolas" class="perfil-img">
+          <h1>Olá, eu sou Nicolas</h1>
+          <p>Desenvolvedor Back-End | Python | SQL | APIs</p>
+          <a href="nicolas-cv.def.pdf" download class="btn-download">
+              <i class="fa-solid fa-download"></i> Baixar Currículo
+          </a>
+      </section>
 
-        <section id="sobre" class="section">
-            <h2>Sobre Mim</h2>
-            <p>Atualmente no último semestre de Análise e Desenvolvimento de Sistemas, possuo experiência com desenvolvimento em C#, Python e SQL.</p>
-        </section>
+      <!-- Sobre -->
+      <section id="sobre" class="section">
+          <h2>Sobre Mim</h2>
+          <p>Sou um desenvolvedor apaixonado por tecnologia, focado em soluções backend eficientes e escaláveis. Experiência comprovada em integrações com API RESTFUL(.NET), Python e SQL.</p>
+          <a href="#contato" class="btn">Entre em Contato</a>
+      </section>
 
-        <section id="projetos" class="section bg-light">
-            <h2>Projetos Recentes</h2>
-            <div class="projetos-grid">
-                <div class="projeto">
-                    <img src="projeto1.jpg" alt="Projeto 1">
-                    <h3>ChatBot em C#</h3>
-                    <p>Criação de um ChatBot integrado com IA para suporte automatizado.</p>
-                    <a href="https://github.com/NicolasLnR/Aplica-o-Chatbot" class="projeto-button">Ver Detalhes</a>
-                </div>
-                <div class="projeto">
-                    <img src="projeto2.jpg" alt="Projeto 2">
-                    <h3>Gerador de Senhas</h3>
-                    <p>Aplicação em Python para criação de senhas seguras personalizadas.</p>
-                    <a href="https://github.com/NicolasLnR/GeradorDeSenhas.py" class="projeto-button">Ver Detalhes</a>
-                </div>
-            </div>
-        </section>
+      <!-- Projetos -->
+      <section id="projetos" class="section bg-light">
+          <h1>Meus Projetos</h1>
+          <div class="projetos-grid">
+              <div class="projeto">
+                  <h3>ChatBot de conversa e integração</h3>
+                  <p>Projeto desenvolvido em C# no Visual studio 2022, consiste em um ChatBot simples de interação com o usuario que pode ser integrado a WhatsApp ou Instagram. Projeto contém uma integração com a API da OPEN AI, para respostas mais otimizadas e personalizadas.</p>
+                  <a href="https://github.com/NicolasLnR/Aplica-o-Chatbot" class="btn">Ver mais</a>
+              </div>
+              <div class="projeto">
+                  <h3>API de integração - VIACEP </h3>
+                  <p>WebService conectado com a API do ViaCep - Ao Colocar um CEP Válido, retorna um JSON com as informações como Bairro, rua etc.</p>
+                  <a href="https://github.com/NicolasLnR/Web-Service---VIACEP" class="btn">Ver mais</a>
+              </div>
+          </div>
+      </section>
 
-        <section id="habilidades" class="section">
-            <h2>Minhas Habilidades</h2>
-            <ul class="habilidades-list">
-                <li>C# & .NET</li>
-                <li>Python</li>
-                <li>SQL & PL/SQL</li>
-                <li>HTML, CSS & JavaScript</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </section>
+      <!-- Habilidades -->
+      <section id="habilidades" class="section">
+          <h2>Habilidades</h2>
+          <div class="habilidades-grid">
+              <div class="habilidade"><i class="fa-brands fa-python"></i> Python</div>
+              <div class="habilidade"><i class="fa-solid fa-database"></i> SQL</div>
+              <div class="habilidade"><i class="fa-solid fa-code"></i> APIs REST</div>
+              <div class="habilidade"><i class="fa-solid fa-server"></i> FastAPI</div>
+          </div>
+          <a href="#projetos" class="btn">Veja meus projetos</a>
+      </section>
 
-        <section id="contato" class="section">
-            <h2>Entre em Contato</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Seu Nome" required />
-                <input type="email" placeholder="Seu Email" required />
-                <textarea placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-        </section>
+      <!-- Contato -->
+      <section id="contato" class="section bg-light">
+          <h2>Contato</h2>
+          <form>
+              <label for="nome">Seu Nome:</label>
+              <input type="text" id="nome" placeholder="Seu Nome">
+
+              <label for="email">Seu E-mail:</label>
+              <input type="email" id="email" placeholder="Seu E-mail">
+
+              <label for="mensagem">Sua Mensagem:</label>
+              <textarea id="mensagem" placeholder="Sua Mensagem"></textarea>
+
+              <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          </form>
+      </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Nicolas Lana. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Nicolas - Todos os direitos reservados.</p>
     </footer>
 
 </body>
