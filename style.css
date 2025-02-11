@@ -3,130 +3,285 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Custom Properties (Variáveis CSS) */
+:root {
+    --primary-color: #ff5733;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-    background: #1e1e1e;
+    background: #222;
+    color: white;
     padding: 20px;
-    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.perfil {
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.perfil img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid #ff5733;
-}
-
-.perfil-info h1 {
-    font-size: 1.5rem;
-}
-
-.redes-sociais a {
-    color: #ff5733;
-    margin-right: 10px;
-    text-decoration: none;
+nav .logo {
+    font-size: 28px;
     font-weight: bold;
 }
 
-.redes-sociais a:hover {
-    text-decoration: underline;
+nav ul {
+    display: flex;
+    list-style: none;
 }
 
-/* Menu Responsivo */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
+nav ul li {
+    margin-left: 30px;
+}
+
+nav a {
     color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: #1e1e1e;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    nav ul.open {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
+nav a:hover {
+    color: var(--primary-color);
 }
 
 /* Hero */
 .hero {
-    height: 60vh;
-    background: linear-gradient(135deg, #ff5733, #222);
+    height: 100vh;
+    background: linear-gradient(to right, #1d1e22, #444);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 40px 20px;
 }
 
-.cta-button {
-    background: #ff5733;
+/* Melhorando a imagem da foto de perfil */
+.hero img.perfil-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+/* Botão de download do CV */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    background: var(--primary-color);
     color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
+    padding: 14px 24px;
+    font-size: 16px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 20px;
 }
 
-.cta-button:hover {
+.btn-download i {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.btn-download:hover {
     background: #c44125;
 }
 
-/* Contato */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Seções */
+.section {
+    padding: 60px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
 }
 
-form input, form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.bg-light {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Habilidades */
+.habilidades-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.habilidade {
+    background: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #0056b3;
 }
 
 /* Rodapé */
 footer {
-    background: #1e1e1e;
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+/* Formatação do formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form button {
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Projetos - Modernização */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.projeto {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+}
+
+.projeto h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.projeto p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.projeto .btn {
     margin-top: 20px;
+    background-color: var(--primary-color);
+}
+
+/* Sobre Mim - Modernização */
+#sobre {
+    background: #fff;
+    border-radius: 10px;
+    padding: 50px;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+#sobre p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+#sobre .btn {
+    background-color: var(--primary-color);
 }
